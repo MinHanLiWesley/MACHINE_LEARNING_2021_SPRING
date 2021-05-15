@@ -1,5 +1,15 @@
 import random
-
+import os
+import glob
+import torch.nn as nn
+import torch.nn.functional as F
+import torchvision
+import torchvision.transforms as transforms
+from torch import optim
+from torch.autograd import Variable
+from torch.utils.data import Dataset, DataLoader
+import matplotlib.pyplot as plt
+from qqdm.notebook import qqdm
 import torch
 import numpy as np
 
@@ -21,18 +31,7 @@ same_seeds(2021)
 
 
 
-import os
-import glob
 
-import torch.nn as nn
-import torch.nn.functional as F
-import torchvision
-import torchvision.transforms as transforms
-from torch import optim
-from torch.autograd import Variable
-from torch.utils.data import Dataset, DataLoader
-import matplotlib.pyplot as plt
-from qqdm.notebook import qqdm
 
 class CrypkoDataset(Dataset):
     def __init__(self, fnames, transform):
@@ -295,8 +294,6 @@ for e, epoch in enumerate(range(n_epoch)):
         # Save the checkpoints.
         torch.save(G.state_dict(), os.path.join(ckpt_dir, 'G.pth'))
         torch.save(D.state_dict(), os.path.join(ckpt_dir, 'D.pth'))
-import torch
-
 G = Generator(z_dim)
 G.load_state_dict(torch.load(os.path.join(ckpt_dir, 'G.pth')))
 G.eval()
