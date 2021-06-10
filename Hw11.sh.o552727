@@ -1,0 +1,15 @@
+Can't locate local/lib.pm in @INC (you may need to install the local::lib module) (@INC contains: /home/wesley/perl5/lib/perl5 /home/wesley/anaconda3/lib/site_perl/5.26.2/x86_64-linux-thread-multi /home/wesley/anaconda3/lib/site_perl/5.26.2 /home/wesley/anaconda3/lib/5.26.2/x86_64-linux-thread-multi /home/wesley/anaconda3/lib/5.26.2 .).
+BEGIN failed--compilation aborted.
+==========================================================
+Starting on : Mon Jun  7 18:22:49 CST 2021
+Running on node : centos77-g1
+Current directory : /home/wesley/ML2021/HW11_Domain_Adaptation
+Current job ID : 552727.centos77-h1
+==========================================================
+Traceback (most recent call last):
+  File "hw11_domain_adaptation.py", line 60, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+0 min 8 sec
+Job Ended at Mon Jun  7 18:22:57 CST 2021
+=======================================================
